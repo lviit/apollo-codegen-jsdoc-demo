@@ -4,18 +4,29 @@
   "private": true,
   "dependencies": {
     "@apollo/react-hooks": "^3.1.5",
+    "apollo-cache-inmemory": "^1.6.5",
+    "apollo-client": "^2.6.8",
+    "apollo-link-http": "^1.5.17",
     "graphql": "^14.6.0",
     "graphql-tag": "^2.10.3",
+    "isomorphic-unfetch": "^3.0.0",
+    "next": "^9.3.5",
+    "next-with-apollo": "^5.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
   "scripts": {
-    "types:generate": "apollo client:codegen --endpoint=http://localhost:4000 --outputFlat --target typescript ./types/schema.ts",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "types:generate": "apollo client:codegen --includes='./queries/**/*' --endpoint=http://localhost:4000 --outputFlat --target typescript ./types/schema.ts",
     "types:check": "tsc"
   },
   "devDependencies": {
+    "@types/node": "^13.13.2",
     "@types/react": "^16.9.34",
     "apollo": "^2.27.3",
+    "prettier": "^2.0.5",
     "typescript": "^3.8.3"
   }
 }

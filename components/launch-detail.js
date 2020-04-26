@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 /**
  * @type {React.FunctionComponent<Schema.LaunchDetails_launch>}
