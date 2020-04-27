@@ -10,6 +10,7 @@ Type declarations can be used directly in the JSDoc comments using the typescrip
 /**
  * @type {React.FunctionComponent<Schema.LaunchTile>}
  */
+const LaunchTile = ({ id, rocket, mission }) => <li>{`${id} - ${rocket?.name} - ${mission?.name}`}</li>;
 ```
 
 When using VS Code, typescript with JSDoc seems to be a mostly similar experience to normal typescript, but keep in mind that there are some [differences](https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html). This example has strict mode enabled. Disabling this, or more specifically `--strictNullChecks` and `--noImplicitAny` should leave you with a setup that throws no type errors for plain JS with no JSDoc comments at all.
